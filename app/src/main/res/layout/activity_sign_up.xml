@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".SignUp">
+
+
+    <TextView
+        android:id="@+id/tvtSignupBanner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cùng Đăng Ký Nào!"
+        android:textColor="#ED392C"
+        android:textSize="35dp"
+        android:layout_marginTop="70dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/tvtSignupBanner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvtSignupBanner1"
+        android:layout_marginBottom="20dp"
+        android:text="Tạo tài khoản Real Estate để sử dụng mọi quyền lợi"
+        android:layout_centerHorizontal="true"
+        android:textColor="#80ED392C"/>
+
+    <EditText
+        android:id="@+id/txtSignUpUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtSignupBanner2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_signup_edittext"
+        android:drawableLeft="@drawable/custom_signup_userlogo"
+        android:drawablePadding="10dp"
+        android:hint="Tên đăng nhập"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColor="#EC673F"
+        android:textColorHint="#BDB6B6"/>
+
+    <EditText
+        android:id="@+id/txtEmailSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSignUpUserName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_signup_edittext"
+        android:drawableLeft="@drawable/custom_signup_userlogo"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="#EC673F"
+        android:textColorHint="#FFBDB6B6"/>
+
+    <EditText
+        android:id="@+id/txtSDT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmailSignUp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_signup_edittext"
+        android:drawableLeft="@drawable/custom_signup_userlogo"
+        android:drawablePadding="10dp"
+        android:hint="Số điện thoại"
+        android:inputType="phone"
+        android:padding="20dp"
+        android:textColor="#EC673F"
+        android:textColorHint="#FFBDB6B6" />
+
+    <EditText
+        android:id="@+id/txtPasswordSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSDT"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_signup_edittext"
+        android:drawableLeft="@drawable/custom_signup_userlogo"
+        android:drawablePadding="10dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="#EC673F"
+        android:textColorHint="#FFBDB6B6"/>
+
+    <EditText
+        android:id="@+id/txtConfirmSignUpPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPasswordSignUp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_signup_edittext"
+        android:drawableLeft="@drawable/custom_signup_userlogo"
+        android:drawablePadding="10dp"
+        android:hint="Nhập lại mật khẩu"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="#EC673F"
+        android:textColorHint="#FFBDB6B6"/>
+
+    <Button
+        android:id="@+id/btnCreateId"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/txtConfirmSignUpPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvtContainer"
+            android:layout_below="@id/btnCreateId"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã có tài khoản?"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quay lại đăng nhập"
+                android:paddingLeft="10dp"
+                android:textColor="#EC673F"/>
+        </LinearLayout>
+</RelativeLayout>

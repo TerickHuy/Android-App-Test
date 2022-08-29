@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@drawable/bg_sun_cardjpg">
+
+    <LinearLayout
+        android:id="@+id/lnl_bannerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp">
+        <ImageView
+            android:id="@+id/homeImgId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/estate_100"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/homeImgId"
+
+                android:layout_centerInParent="true"
+                android:fontFamily="serif"
+                android:text="Estate"
+                android:textColor="#F6F6F6"
+                android:textSize="50dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homeImgId"
+                android:layout_centerInParent="true"
+                android:text="Bất động sản Việt Nam"
+                android:textColor="#F6F6F6" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/loginTitleId"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:layout_marginBottom="50dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Welcome"-->
+<!--        android:textColor="#ffff"-->
+<!--        android:textSize="40dp"-->
+<!--        android:textStyle="bold" />-->
+
+    <EditText
+        android:id="@+id/txt_loginNameId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnl_bannerId"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_login_pass_edittext"
+        android:drawableLeft="@drawable/custom_login_logo"
+        android:drawablePadding="10dp"
+        android:hint="Tên tài khoản"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/txt_passwordId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_loginNameId"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_login_pass_edittext"
+        android:drawableLeft="@drawable/custom_password_logo"
+        android:drawablePadding="10dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColorHint="@color/white" />
+
+    <Button
+        android:id="@+id/btnLoginId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ResetPassId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:onClick="signInEvent"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnSignUpId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLoginId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Đăng ký"
+        android:onClick="signUpEvent"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/ResetPassId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_passwordId"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="Quên mật khẩu?"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/anotherLoginCaseId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/socialIconId"
+        android:layout_centerHorizontal="true"
+        android:text="Hoặc đăng nhập với"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/socialIconId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_fbId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/facebook_logo"
+            android:padding="20dp"
+            android:onClick="fbPage"/>
+
+        <ImageView
+            android:id="@+id/img_gmailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google_logo"
+            android:onClick="gmailPopUp"
+            android:padding="20dp"/>
+
+        <ImageView
+            android:id="@+id/img_tiktokId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tiktok_logo_48"
+            android:onClick="tiktokPopUp"
+            android:padding="20dp"/>
+
+        <ImageView
+            android:id="@+id/img_twitterId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twitter_logo"
+            android:onClick="twitterPopUp"
+            android:padding="20dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
